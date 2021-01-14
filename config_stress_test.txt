@@ -1,0 +1,11 @@
+bucket=test
+size=524288000
+number=10
+s3dir=/root
+s3ip=175.24.70.98
+userName=devvtest1111
+privateKey=5JReF8eeGS53B8prdcrSfTf6dGbvu3QJ6KceE8rLsnRaNMMCYw9
+mail_user=send_mail_address
+mail_password=mail_password
+sender=send_mail_address
+receiver=receiver_mail_address
