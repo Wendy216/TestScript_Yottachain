@@ -63,9 +63,9 @@ if __name__ == "__main__":
                           % (time.strftime("%Y-%m-%d %H:%M:%S"), int(file_number), int(file_size)))
 
             for i in range(int(file_number)):
-                t = threading.Thread(target=fp.c_only_u,
-                                     args=(bucket_name, file_name + ".txt%s" % i,
-                                           int(file_size), transfer_way, access_key, secret_key))
+                t = threading.Thread(target=fp.c_u,
+                                     args=(file_name + ".txt%s" % i,
+                                           int(file_size), bucket_name, transfer_way, access_key, secret_key))
                 t.start()
                 threads.append(t)
 

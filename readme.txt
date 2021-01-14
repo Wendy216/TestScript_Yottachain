@@ -1,4 +1,14 @@
-Note:
-1.autotest.shåŒ…æ‹¬æ‰€æœ‰çš„æµ‹è¯•ç”¨ä¾‹è„šæœ¬ï¼Œ log.txtæ˜¯è¿è¡Œæ—¶äº§ç”Ÿçš„logæ–‡ä»¶ï¼Œreport.txtä¸ºæŠ¥å‘Šæ–‡ä»¶ï¼Œversion.txtä¸ºç‰ˆæœ¬ä¿¡æ¯
-2.config_å¼€å¤´çš„é…ç½®æ–‡ä»¶ä¸ºä¸Šä¼ æ–‡ä»¶çš„ä¿¡æ¯ï¼Œconfig_fixedå¼€å¤´çš„ä¸ºå›ºå®šå¤§å°ï¼Œconfig_randå¼€å¤´çš„ä¸ºéšæœºå¤§å°ï¼Œconfig_dirå¼€å¤´çš„ä¸ºä¸¢åŒ…å’Œå»¶æ—¶ç”¨ä¾‹ä¿¡æ¯
-3.key.txtæ–‡ä»¶é‡Œé¢åŒ…å«ç”¨æˆ·é…ç½®ä¿¡æ¯ï¼štransfer_way=s3cmdä»£è¡¨ä½¿ç”¨s3cmdå‘½ä»¤ï¼Œ transfer_way=s3ä»£è¡¨ä½¿ç”¨s3çš„apiæ¥å£ï¼Œs3 apiæ¥å£æ–¹å¼éœ€è¦åœ¨é…ç½®æ–‡ä»¶åŠ å…¥access_key, secret_keyä¿¡æ¯
+Ò». ÅäÖÃºÍÔËĞĞ£º
+1.ÅäÖÃÎÄ¼ş£ºconfig_stress_test.txt: ÅäÖÃÉÏ´«bucket£¬µ¥¸öÎÄ¼ş´óĞ¡size£¬ÊıÁ¿number£¬go°æ±¾s3°²×°µÄÄ¿Â¼Ãû³Æs3dir£¬×¢²áµÄÓÃ»§ÃûuserNameºÍË½Ô¿privateKey£¬ÓÃÓÚÉÏ´«Ö®Ç°ÖØÆôs3ºó×¢²áÊ¹ÓÃ¡£»¹ĞèÒªÅäÖÃ·¢ËÍÓÊ¼şµÄÓÃ»§ÃûºÍÃÜÂë£ºmail_user, mail_password¡£sender, receiverÎªÓÊ¼ş·¢ËÍºÍ½ÓÊÕµØÖ·¡£
+2. /root/.s3cfgÅäÖÃÎÄ¼şĞèÒªºÍconfig_stress_test.txtÎÄ¼şÖĞµÄÓÃ»§ĞÅÏ¢Ò»ÖÂ¡£
+È»ºóÔËĞĞnohup python upload_ones3cmd_go.py &
+
+Èç¹ûÅäÖÃÎª¶¨Ê±ÈÎÎñ£¬ĞèÒªÈçÏÂÅäÖÃ£º
+¶ş. ÅäÖÃ¶¨Ê±ÈÎÎñ£º²é¿´crond¶¨Ê±·şÎñÊÇ·ñ¿ªÆô£¬systemctl status crond£¬Èç¹ûÔËĞĞ£¬¾Í²»ÓÃ¿ªÆô£¬Èç¹ûÎ´ÔËĞĞĞèÒªsystemctl start crond¿ªÆô¶¨Ê±·şÎñ¡£È»ºóÅäÖÃcrontab£¬ÉèÖÃ¶¨Ê±ÈÎÎñ£¬ÈçÃ¿Ìì0µã30ÔËĞĞÑ¹Á¦²âÊÔ
+
+crontab -e
+Î´ÅäÖÃÓÊ¼ş·şÎñÆ÷ÅäÖÃÎª£º0 20 * * * flock -xn /root/stress_test.lock -c 'python /root/upload_ones3cmd_go.py > /root/nohup.txt &'   //ÈçÅäÖÃÎªÃ¿Ìì20£º00¶¨Ê±ÔËĞĞ
+
+
+
+Èı.ÏÂÔØÖ¸¶¨ÈÕÆÚµÄbucketÏÂÃæµÄËùÓĞÎÄ¼ş: python download.py£¬ÅäÖÃÎÄ¼şconfig_download_test.txt: bucket_start: ¿ªÊ¼ÈÕÆÚ£¬ bucket_end: ½áÊøÈÕÆÚ
