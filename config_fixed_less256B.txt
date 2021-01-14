@@ -1,0 +1,3 @@
+bucket=wendy
+size=200
+number=5

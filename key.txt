@@ -1,0 +1,3 @@
+transfer_way=s3
+access_key=YTA7yE31LxypjwDTsV5N6xtRig8r98WVaR2v3knnvvd6ryEyrHhrQ
+secret_key=5JReF8eeGS53B8prdcrSfTf6dGbvu3QJ6KceE8rLsnRaNMMCYw9

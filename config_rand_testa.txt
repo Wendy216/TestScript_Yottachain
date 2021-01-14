@@ -1,0 +1,5 @@
+bucket=testa
+l_size=105760
+h_size=1057600
+number=5
+datanode=1
