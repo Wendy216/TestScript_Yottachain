@@ -1,0 +1,6 @@
+interval=5
+s3ip=175.24.70.98
+mail_user=gengwenjuan@yottachain.io
+mail_password=Wendy_216
+sender=gengwenjuan@yottachain.io
+receiver=gengwenjuan@yottachain.io,linyingying@yottachain.io,zhangzhengyan@yottachain.io

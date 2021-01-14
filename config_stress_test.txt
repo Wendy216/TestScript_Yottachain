@@ -1,0 +1,11 @@
+bucket=test
+size=524288000
+number=10
+s3dir=/root
+s3ip=175.24.70.98
+userName=devvtest1111
+privateKey=5JReF8eeGS53B8prdcrSfTf6dGbvu3QJ6KceE8rLsnRaNMMCYw9
+mail_user=gengwenjuan@yottachain.io
+mail_password=Wendy_216
+sender=gengwenjuan@yottachain.io
+receiver=gengwenjuan@yottachain.io,linyingying@yottachain.io,zhangzhengyan@yottachain.io
